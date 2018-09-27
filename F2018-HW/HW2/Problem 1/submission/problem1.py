@@ -31,8 +31,11 @@ pointer.append(tempPointer)
 while tempPointer != startVert:
     tempPointer = backPointer[tempPointer]
     pointer.append(tempPointer)
-
-# pointer = reversed(pointer)
 print(sorted(pointer))
 print(costList.values())
+
+file = open("output_1.txt","w")
+np.savetxt('output_1.txt',sorted(pointer))
+file.close()
+
 # print(costList[goalVert])

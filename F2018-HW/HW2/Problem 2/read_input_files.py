@@ -65,8 +65,7 @@ def euclidean_distance(adjacencyList,coordFileContent, goalVert):
         goalY = float(goal[1])
         currX = float(currCoord[0])
         currY = float(currCoord[1])
-        if vertexList[counter] not in euclideanDist:
-            euclideanDist[vertexList[counter]] = []
-        euclideanDist[vertexList[counter]].append(\
-        np.sqrt(np.square(goalX - currX) + np.square(goalY - currY)))
+        # if vertexList[counter] not in euclideanDist:
+        #     euclideanDist[vertexList[counter]] = []
+        euclideanDist[vertexList[counter]] = np.sqrt(np.square(goalX - currX) + np.square(goalY - currY))
     return euclideanDist
